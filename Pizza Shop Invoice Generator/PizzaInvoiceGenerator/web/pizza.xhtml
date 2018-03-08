@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+    
+        <title>Pizza</title>
+    
+    <h:body>
+        <h:form>
+            <h:panelGrid columns ="2">
+                <h:outputLabel value = "First name: " />
+                <h:inputText id = "fname" size= "8" style="color :black; text-align : left" value ="#{pizza.fname}" required="true" requiredMessage="Enter First Name:"/>
+                
+                <h:outputLabel value = "Middle name: "/>
+                <h:inputText id = "mname" size= "8" style="color :black; text-align : left" value ="#{pizza.mname}"/>                
+                <h:outputLabel value = "Last name: "/>
+                <h:inputText id = "lname" size= "8" style="color :black; text-align : left" value ="#{pizza.lname}" required="true" requiredMessage="Enter Last Name:"/>
+                
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="2">
+               <h:outputLabel value = "Phone number: "/>
+               <h:inputText id = "phno" style="color :black; text-align : left"  value ="#{pizza.phno}" required="true" requiredMessage="Enter Phone No.:"/>  
+              
+               <h:outputLabel value = "Email: "/>
+                <h:inputText id = "email" style="color :black; text-align : left" value ="#{pizza.email}" required="true" requiredMessage="Enter Email:"/>
+                
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="4">
+                <h:outputLabel value = "Address line 1: "/>
+                <h:inputText id = "al1" size= "8" style="color :black; text-align : left" value ="#{pizza.al1}" required="true" requiredMessage="Enter Address 1:"/>
+                
+                <h:outputLabel value = "Address line 2: "/>
+                <h:inputText id = "al2" size= "8" style="color :black; text-align : left" value ="#{pizza.al2}" required="true" requiredMessage="Enter Address 2:"/>
+                
+                <h:outputLabel value = "City: "/>
+                <h:inputText id = "city" size= "8" style="color :black; text-align : left" value ="#{pizza.city}" required="true" requiredMessage="Enter City:"/>
+                
+                <h:outputLabel value = "Pin: "/>
+                <h:inputText id = "pin" style="color :black; text-align : left" value ="#{pizza.pin}" required="true" requiredMessage="Enter Pin Code:"/>
+               
+            </h:panelGrid>
+            
+            <h:panelGrid columns="3">
+                <h:selectOneRadio id ="pizza_size" value="#{pizza.pizza_size}" required="true" requiredMessage="Select Size:">
+                    <f:selectItem itemLabel="Small(500)" itemValue="S"/>
+                    <f:selectItem itemLabel="Medium(750)" itemValue="M"/>
+                    <f:selectItem itemLabel="Large(1000)" itemValue="L"/>
+                </h:selectOneRadio>    
+                
+            </h:panelGrid>
+            <h:panelGrid columns = "1">
+                <h:outputLabel>Pizza toppings: </h:outputLabel> 
+                <h:selectManyCheckbox id ="pizza_ing" value="#{pizza.pizza_ing}">
+            
+                    <f:selectItem itemValue ="Mushroom"/>
+                    <f:selectItem itemValue ="Red Peppers"/>
+                    <f:selectItem itemValue ="Green Olives"/>
+                    <f:selectItem itemValue ="Pineapple"/>
+                    <f:selectItem itemValue ="Broccoli"/>
+                    <f:selectItem itemValue ="Black Olives"/>
+                    
+                </h:selectManyCheckbox>
+            </h:panelGrid>
+            
+            <h:commandButton value="order!"/>
+            <h:outputText escape="false" style="color:black" value="#{pizza.response}"/>
+                   
+        </h:form>
+    </h:body>
+</html>
+
