@@ -1,13 +1,11 @@
 # Java Programs
 
-Login System  
-	LoginSystem1 is created using IntelliJ Idea
-	LoginSystem2 is created using TextPad
-StudentRegistrationAadhar is created using Netbeans IDE
-PizzaInvoiceGenerator is created using Netbeans IDE
-TriangleAngleAreaPeriValidation is created using Netbeans IDE
+In this you will study Servlets/JSP/JSF & Web Services. As preparation for this material, begin by creating the following programs:
 
-Just Download the required .Zip file and import to the respective IDE
+This is a series of large “real-world” programs which use all the client/server/database concepts you have learnt.Work on the programs independently, until you have created a “perfect” application.
+
+For Using these applications:
+Just Download the required .Zip file/folder and import/open project to the respective IDE
 
 Run the application after successful import.
 
